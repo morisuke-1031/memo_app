@@ -1,0 +1,21 @@
+<!-- app/views/memos/edit.html.erb -->
+
+<h1>メモ編集</h1>
+
+<%= form_with(model: @memo, url: memo_path(@memo), method: :patch) do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div>
+    <%= form.submit '更新する' %>
+  </div>
+<% end %>
+
+<%= link_to '戻る', @memo %>

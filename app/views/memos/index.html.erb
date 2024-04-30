@@ -1,0 +1,10 @@
+<!-- app/views/memos/index.html.erb -->
+
+<h1>メモ一覧</h1>
+
+<% @memos.each do |memo| %>
+  <h3><%= link_to memo.title, memo %></h3>
+  <p><%= memo.content %></p>
+<% end %>
+
+<%= link_to '新規作成', new_memo_path %>

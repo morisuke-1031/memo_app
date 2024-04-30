@@ -1,0 +1,21 @@
+<!-- app/views/memos/new.html.erb -->
+
+<h1>新規メモ作成</h1>
+
+<%= form_with(model: @memo, url: memos_path) do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div>
+    <%= form.submit '作成する' %>
+  </div>
+<% end %>
+
+<%= link_to '戻る', memos_path %>
